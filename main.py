@@ -1,9 +1,12 @@
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, Field, ValidationError
-from typing import Optional, Dict, Any
+from pydantic import BaseModel
+from typing import Optional, Dict
 import csv
+# OS utilizado para verificar a exsitencia do arquivo alunos.csv, para evitar o uso de um try except
 import os
+# ast foi utilizado para Converter string do csv em um dicionari python na hora de trazer todos os alunos de volta
 import ast
+# numpy utilizado para fazer as estatisticas como média, mediana e desvio padrão
 import numpy as np
 
 app = FastAPI()
@@ -20,6 +23,8 @@ def load_alunos():
                 aluno = {
                     "nome": row["nome"],
                     "id": int(row["id"]),
+                    # ast.literal_eval(row["notas"]) converte a string row["notas"] 
+                    # de volta para um dicionário Python ({'matematica': 8.5, 'portugues': 7.0}).
                     "notas": ast.literal_eval(row["notas"]) if row["notas"] else None
                 }
                 alunos.append(aluno)

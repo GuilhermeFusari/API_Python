@@ -1,2 +1,3 @@
 nome,id,notas
-Maria ,3,"{'Matemática': 3.0, 'Português': 5.0}"
+Maria,1,"{'Matemática': 10.0, 'Português': 9.0, 'Geografia': 7.0}"
+João,2,"{'Matemática': 10.0, 'Português': 5.0, 'Geografia': 9.0}"

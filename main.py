@@ -121,7 +121,7 @@ def get_estatisticas_by_materia(materia: str):
     else:
         raise HTTPException(status_code=404, detail="Matéria não encontrada")
 
-@app.get("/alunos/desempenho")
+@app.get("/desempenho")
 def get_alunos_desempenho_baixo():
     output = []
     for aluno in alunos:

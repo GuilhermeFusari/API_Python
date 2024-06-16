@@ -4,7 +4,7 @@ from typing import Optional, Dict
 import csv
 # OS utilizado para verificar a exsitencia do arquivo alunos.csv, para evitar o uso de um try except
 import os
-# ast foi utilizado para Converter string do csv em um dicionari python na hora de trazer todos os alunos de volta
+# ast foi utilizado para Converter string do csv em um dicionario python na hora de trazer todos os alunos de volta
 import ast
 # numpy utilizado para fazer as estatisticas como média, mediana e desvio padrão
 import numpy as np
@@ -31,7 +31,7 @@ def load_alunos():
     return alunos
 
 # Salvar os alunos no arquivo CSV
-# Aqui apenas pega a lista de alunos e adiciona ela ao arquivo
+# Pega a lista de alunos e adiciona ela ao arquivo
 def save_alunos(alunos):
     with open('alunos.csv', mode='w', newline='') as f:
         fieldnames = ["nome", "id", "notas"]
